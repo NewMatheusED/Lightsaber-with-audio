@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #222222;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #fff;
+    font-family: arial;
+    font-weight: 200
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  .lightsaber1 {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%) ;
+    margin-top: 40px;
+  }
+  
+  .lightsaber2 {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%) ;
+    margin-top: 40px;
+  }
+  
+  .lightsaber1 .blade1 {
+    position: relative;
+    width: 10px;
+    height: 80px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 0 0 100px 100px;
+    background-image: linear-gradient(
+      black 0 20px,
+      gold 0 22px,
+      black 0 24px,
+      gold 0 26px,
+      black 0 28px,
+      gold 0 30px,
+      black 0 32px,
+      gold 0 34px,
+      black 0 46px,
+      gold 0 48px,
+      black 0 50px,
+      gold 0 52px,
+      black 0 54px,
+      gold 0 56px,
+      black 0 58px,
+      gold 0 60px,
+      black 0 80px
+    );
+  }
+  
+  .lightsaber2 .blade2 {
+    position: relative;
+    width: 10px;
+    height: 80px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 0 0 100px 100px;
+    background-image: linear-gradient(
+      black 0 20px,
+      silver 0 22px,
+      black 0 24px,
+      silver 0 26px,
+      black 0 28px,
+      silver 0 30px,
+      black 0 32px,
+      silver 0 34px,
+      black 0 46px,
+      silver 0 48px,
+      black 0 50px,
+      silver 0 52px,
+      black 0 54px,
+      silver 0 56px,
+      black 0 58px,
+      silver 0 60px,
+      black 0 80px
+    );
+  }
+  
+  .blade1 .sombra1 {
+    position: absolute;
+    transform: translateY(-100%);
+    background: white;
+    width: 10px;
+    height: 200px;
+    border-radius: 100px 100px 0 0;
+    box-shadow: 0 0 1em hsl(120,100%,50%),
+      0 0 1em hsl(120, 100%, 50%),
+      0 0 1em hsl(120, 100%, 50%);
+    animation: pulsing 2s infinite;
+    transition: .2s linear
+  }
+  
+  .blade2 .sombra2 {
+    content: '';
+    position: absolute;
+    transform: translateY(-100%);
+    background: white;
+    width: 10px;
+    height: 200px;
+    border-radius: 100px 100px 0 0;
+    box-shadow: 0 0 1em hsl(0, 100%, 50%),
+      0 0 1em hsl(0, 100%, 50%),
+      0 0 1em hsl(0, 100%, 50%);
+    animation: pulsing 2s infinite;
+    transition: .2s linear
+  }
+  
+  .blade1 .sabre1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-100%);
+    border-radius: 100px 100px 0 0;
+    height: 200px;
+    width: 10px;
+    background: hsl(120, 100%, 50%);
+    opacity: 1;
+    animation: pulsing 2s infinite;
+    transition: .2s linear
+  }
+  
+  .blade2 .sabre2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-100%);
+    border-radius: 100px 100px 0 0;
+    height: 200px;
+    width: 10px;
+    background: hsl(0, 100%, 50%);
+    opacity: 1;
+    animation: pulsing 2s infinite;
+    transition: .2s linear
+  }
+  
+  @keyframes pulsing {
+    50% {
+      opacity: .7
+    }
+  }
