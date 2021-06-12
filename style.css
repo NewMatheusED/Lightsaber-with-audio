@@ -4,6 +4,10 @@
     box-sizing: border-box;
     background: #222222;
   }
+
+  :root {
+    --color: hsl(120, 100%, 50%);
+  }
   
   h3 {
     text-align: center;
@@ -19,18 +23,18 @@
   .lightsaber1 {
     position: absolute;
     top: 50%;
-    left: 40%;
+    left: 50%;
     transform: translate(-50%, -50%) ;
     margin-top: 40px;
   }
   
-  .lightsaber2 {
+  /* .lightsaber2 {
     position: absolute;
     top: 50%;
     left: 60%;
     transform: translate(-50%, -50%) ;
     margin-top: 40px;
-  }
+  } */
   
   .lightsaber1 .blade1 {
     position: relative;
@@ -60,7 +64,7 @@
     );
   }
   
-  .lightsaber2 .blade2 {
+  /* .lightsaber2 .blade2 {
     position: relative;
     width: 10px;
     height: 80px;
@@ -86,7 +90,7 @@
       silver 0 60px,
       black 0 80px
     );
-  }
+  } */
   
   .blade1 .sombra1 {
     position: absolute;
@@ -95,14 +99,14 @@
     width: 10px;
     height: 200px;
     border-radius: 100px 100px 0 0;
-    box-shadow: 0 0 1em hsl(120,100%,50%),
-      0 0 1em hsl(120, 100%, 50%),
-      0 0 1em hsl(120, 100%, 50%);
+    box-shadow: 0 0 2em var(--color),
+      0 0 2em var(--color),
+      0 0 2em var(--color);
     animation: pulsing 2s infinite;
     transition: .2s linear
   }
   
-  .blade2 .sombra2 {
+  /* .blade2 .sombra2 {
     content: '';
     position: absolute;
     transform: translateY(-100%);
@@ -115,7 +119,7 @@
       0 0 1em hsl(0, 100%, 50%);
     animation: pulsing 2s infinite;
     transition: .2s linear
-  }
+  } */
   
   .blade1 .sabre1 {
     position: absolute;
@@ -127,13 +131,13 @@
     border-radius: 100px 100px 0 0;
     height: 200px;
     width: 10px;
-    background: hsl(120, 100%, 50%);
+    background: var(--color);
     opacity: 1;
     animation: pulsing 2s infinite;
     transition: .2s linear
   }
   
-  .blade2 .sabre2 {
+  /* .blade2 .sabre2 {
     position: absolute;
     left: 0;
     top: 0;
@@ -147,6 +151,63 @@
     opacity: 1;
     animation: pulsing 2s infinite;
     transition: .2s linear
+  } */
+
+  .flex-itens {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 250px;
+
+  }
+
+  span.color {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    cursor: pointer;
+    transition: .2s
+  }
+
+  span.color:nth-child(1) {
+    margin-left: 0px;
+    background: hsl(120, 100%, 50%);
+    border: 1px solid hsl(120, 100%, 50%);
+    box-shadow: 0 0 1em hsl(120, 100%, 50%),
+      0 0 1em hsl(120, 100%, 50%),
+      0 0 1em hsl(120, 100%, 50%);
+  }
+
+  span.color:nth-child(2) {
+    margin-left: 70px;
+    background: hsl(0, 100%, 50%);
+    border: 1px solid hsl(0, 100%, 50%);
+    box-shadow: 0 0 1em hsl(0, 100%, 50%),
+      0 0 1em hsl(0, 100%, 50%),
+      0 0 1em hsl(0, 100%, 50%);
+  }
+
+  span.color:nth-child(3) {
+    margin-left: 140px;
+    background: hsl(25, 100%, 50%);
+    border: 1px solid hsl(25, 100%, 50%);
+    box-shadow: 0 0 1em hsl(25, 100%, 50%),
+      0 0 1em hsl(25, 100%, 50%),
+      0 0 1em hsl(25, 100%, 50%);
+  }
+
+  span.color:nth-child(4) {
+    margin-left: 210px;
+    background: hsl(50, 100%, 50%);
+    border: 1px solid hsl(50, 100%, 50%);
+    box-shadow: 0 0 1em hsl(50, 100%, 50%),
+      0 0 1em hsl(50, 100%, 50%),
+      0 0 1em hsl(50, 100%, 50%);
+  }
+
+  span.color:hover {
+    opacity: .7
   }
   
   @keyframes pulsing {
